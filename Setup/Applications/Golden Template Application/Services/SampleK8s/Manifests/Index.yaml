@@ -3,5 +3,6 @@ type: APPLICATION_MANIFEST
 gitFileConfig:
   branch: master
   connectorName: default-k8s-manifests
+  filePath: Files
   useBranch: true
 storeType: Remote
