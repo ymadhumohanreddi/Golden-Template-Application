@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: qa-kubernetes_cluster
-  namespace: ${workflow.variables.namespace}
+  namespace: ${serviceVariable.namespace}
   releaseName: release-${infra.kubernetes.infraId}
