@@ -49,10 +49,10 @@ pipelineStages:
   workflowVariables:
   - entityType: ENVIRONMENT
     name: Environment
-    value: dev
+    value: prod
   - entityType: SERVICE
     name: Service
     value: SampleK8s
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: Dev
+    value: Prod
