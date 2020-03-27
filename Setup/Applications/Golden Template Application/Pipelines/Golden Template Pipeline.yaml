@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: PIPELINE
 pipelineStages:
 - type: ENV_STATE
-  name: Rolling Deployment to Dev
+  name: Dev Deployment
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
@@ -25,7 +25,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: TtXqjoFsS2yyEJPM-cEZRg
+    pipelineStageElementId: ON4mdsA8QVWbdl9GyfUUGw
     stageName: Approval to Prod
     disable: false
     timeoutMillis: 86400000
