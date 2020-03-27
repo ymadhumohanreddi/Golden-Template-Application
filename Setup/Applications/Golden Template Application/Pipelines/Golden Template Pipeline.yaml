@@ -26,7 +26,7 @@ pipelineStages:
     userGroups:
     - 2xqZDBM1SWmyjndDGrZpcA
     variables: null
-    pipelineStageElementId: xb5dVtG4T02DHtWp6cngWQ
+    pipelineStageElementId: 0z6Vhc12QRWUrKjg9f5WJQ
     stageName: Approval to Prod
     disable: false
     timeoutMillis: 86400000
@@ -38,3 +38,20 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: Approval to Prod
+- type: ENV_STATE
+  name: Prod Deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Prod Rolling Deployment
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: prod
+  - entityType: SERVICE
+    name: Service
+    value: SampleK8s
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: Prod
