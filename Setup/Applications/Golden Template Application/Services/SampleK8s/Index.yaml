@@ -1,9 +1,0 @@
-harnessApiVersion: '1.0'
-type: SERVICE
-artifactType: DOCKER
-configVariables:
-- name: namespace
-  value: ${env.name}
-  valueType: TEXT
-deploymentType: KUBERNETES
-helmVersion: V2
