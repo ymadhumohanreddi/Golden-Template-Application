@@ -1,3 +1,21 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
 description: Pipeline template for Dev teams
+pipelineStages:
+- type: ENV_STATE
+  name: Dev Deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Dev Rolling Deployment
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: dev
+  - entityType: SERVICE
+    name: Service
+    value: SampleK8s
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: Dev
