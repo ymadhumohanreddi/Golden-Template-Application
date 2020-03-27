@@ -26,8 +26,8 @@ pipelineStages:
     userGroups:
     - 2xqZDBM1SWmyjndDGrZpcA
     variables: null
-    pipelineStageElementId: Efl7m3DbT9WLvr-ULsex2Q
-    stageName: STAGE 2
+    pipelineStageElementId: xb5dVtG4T02DHtWp6cngWQ
+    stageName: Approval to Prod
     disable: false
     timeoutMillis: 86400000
     disableAssertion: null
@@ -37,4 +37,4 @@ pipelineStages:
     pipelineId: c80URdlFRsObw6NxjoFy9g
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 2
+  stageName: Approval to Prod
