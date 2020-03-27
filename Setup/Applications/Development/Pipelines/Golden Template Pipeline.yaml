@@ -1,0 +1,57 @@
+harnessApiVersion: '1.0'
+type: PIPELINE
+description: Pipeline template for Dev teams
+pipelineStages:
+- type: ENV_STATE
+  name: Dev Deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Dev Rolling Deployment
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: dev
+  - entityType: SERVICE
+    name: Service
+    value: SampleK8s
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: Dev
+- type: APPROVAL
+  name: Approval 1
+  parallel: false
+  properties:
+    userGroups:
+    - 2xqZDBM1SWmyjndDGrZpcA
+    variables: null
+    pipelineStageElementId: 0z6Vhc12QRWUrKjg9f5WJQ
+    stageName: Approval to Prod
+    disable: false
+    timeoutMillis: 86400000
+    disableAssertion: null
+    pipelineStageParallelIndex: 2
+    approvalStateType: USER_GROUP
+    sweepingOutputName: ''
+    pipelineId: c80URdlFRsObw6NxjoFy9g
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Approval to Prod
+- type: ENV_STATE
+  name: Prod Deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Prod Rolling Deployment
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: prod
+  - entityType: SERVICE
+    name: Service
+    value: MyK8sApp
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: Prod
