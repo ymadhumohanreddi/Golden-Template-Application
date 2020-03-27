@@ -1,8 +1,0 @@
-harnessApiVersion: '1.0'
-type: APPLICATION_MANIFEST
-gitFileConfig:
-  branch: master
-  connectorName: default-k8s-manifests
-  filePath: Manifests/Files
-  useBranch: true
-storeType: Remote
