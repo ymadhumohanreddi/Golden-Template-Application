@@ -15,7 +15,7 @@ pipelineStages:
     value: dev
   - entityType: SERVICE
     name: Service
-    value: SampleK8s
+    value: MyK8sApp
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: Dev
