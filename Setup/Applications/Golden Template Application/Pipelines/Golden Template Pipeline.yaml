@@ -19,3 +19,22 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: Dev
+- type: APPROVAL
+  name: Approval 1
+  parallel: false
+  properties:
+    userGroups:
+    - 2xqZDBM1SWmyjndDGrZpcA
+    variables: null
+    pipelineStageElementId: Efl7m3DbT9WLvr-ULsex2Q
+    stageName: STAGE 2
+    disable: false
+    timeoutMillis: 86400000
+    disableAssertion: null
+    pipelineStageParallelIndex: 2
+    approvalStateType: USER_GROUP
+    sweepingOutputName: ''
+    pipelineId: c80URdlFRsObw6NxjoFy9g
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
