@@ -139,5 +139,5 @@ userVariables:
 - type: TEXT
   fixed: false
   mandatory: true
-  name: wf-var
+  name: wfvar
   value: wf-var-value
