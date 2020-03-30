@@ -95,6 +95,7 @@ rollbackPhases:
       value: INFRASTRUCTURE_DEFINITION
 tags:
   ${account.defaults.example}: ''
+  ${app.defaults.RUNTIME_PATH}: ''
   account example: ${account.defaults.example}
   wf-var-example: ${workflow.variables.wf-var}
 templateExpressions:
