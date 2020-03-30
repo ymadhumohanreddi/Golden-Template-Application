@@ -96,7 +96,6 @@ rollbackPhases:
 tags:
   ${account.defaults.example}: ''
   account example: ${account.defaults.example}
-  app runtime: ${app.defaults.RUNTIME_PATH}
   wf-var-example: ${workflow.variables.wf-var}
 templateExpressions:
 - expression: ${Environment}
