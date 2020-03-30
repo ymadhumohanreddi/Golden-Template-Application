@@ -95,7 +95,6 @@ rollbackPhases:
       value: INFRASTRUCTURE_DEFINITION
 tags:
   ${account.defaults.example}: ''
-  example: ${account.defaults.example}
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
