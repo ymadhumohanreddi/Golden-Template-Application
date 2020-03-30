@@ -98,6 +98,7 @@ tags:
   ${app.defaults.RUNTIME_PATH}: ''
   account example: ${account.defaults.example}
   app runtime: ${app.defaults.RUNTIME_PATH}
+  workflow-env: ${workflow.variables.Environment}
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
