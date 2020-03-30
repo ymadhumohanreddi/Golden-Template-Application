@@ -1,6 +1,6 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
-description: Pipeline template for Dev teams
+description: Pipeline template for Dev teams.
 pipelineStages:
 - type: ENV_STATE
   name: Dev Deployment
@@ -23,10 +23,11 @@ pipelineStages:
   name: Approval 1
   parallel: false
   properties:
+    workflowVariables: null
     userGroups:
-    - 2xqZDBM1SWmyjndDGrZpcA
+    - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: 0z6Vhc12QRWUrKjg9f5WJQ
+    pipelineStageElementId: ON4mdsA8QVWbdl9GyfUUGw
     stageName: Approval to Prod
     disable: false
     timeoutMillis: 86400000
@@ -34,7 +35,7 @@ pipelineStages:
     pipelineStageParallelIndex: 2
     approvalStateType: USER_GROUP
     sweepingOutputName: ''
-    pipelineId: c80URdlFRsObw6NxjoFy9g
+    pipelineId: Zhbd6PbaQ1-9tNkT-Sm0tg
   skipCondition:
     type: DO_NOT_SKIP
   stageName: Approval to Prod

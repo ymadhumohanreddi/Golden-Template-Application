@@ -15,7 +15,7 @@ notificationRules:
   notificationGroupAsExpression: false
   userGroupAsExpression: false
   userGroupIds:
-  - 2xqZDBM1SWmyjndDGrZpcA
+  - yQo3j5AvTwWgA4zmojRntg
 phases:
 - type: KUBERNETES
   computeProviderName: qa-kubernetes_cluster
