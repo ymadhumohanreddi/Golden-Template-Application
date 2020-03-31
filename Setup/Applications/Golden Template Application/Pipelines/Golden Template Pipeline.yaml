@@ -51,6 +51,10 @@ pipelineStages:
   stageName: Prod Rolling Deployment
   workflowName: Golden Rolling Deployment
   workflowVariables:
+  - name: wfvar
+    value: wf-var-value
+  - name: dash-dash
+    value: dash-value
   - entityType: ENVIRONMENT
     name: Environment
     value: prod
