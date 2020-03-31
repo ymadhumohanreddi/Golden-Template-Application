@@ -8,21 +8,28 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: Dev Rolling Deployment
-  workflowName: Golden Rolling Deployment
+  workflowName: Silver Rolling Deployment
   workflowVariables:
   - name: wfvar
     value: wf-var-value
-  - name: dash-dash
-    value: dash
+  - entityType: APPDYNAMICS_CONFIGID
+    name: AppDynamics_Server
+    value: ${template.appDserver}
+  - entityType: APPDYNAMICS_TIERID
+    name: AppDynamics_Tier
+    value: ${template.appDtier}
   - entityType: ENVIRONMENT
     name: Environment
-    value: ${template.environment}
+    value: ${template.env}
   - entityType: SERVICE
     name: Service
     value: ${template.service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${template.infra}
+  - entityType: APPDYNAMICS_APPID
+    name: AppDynamics_Application
+    value: ${template.appDapp}
 - type: APPROVAL
   name: Approval 1
   parallel: false
@@ -53,8 +60,6 @@ pipelineStages:
   workflowVariables:
   - name: wfvar
     value: wf-var-value
-  - name: dash-dash
-    value: dash-value
   - entityType: ENVIRONMENT
     name: Environment
     value: prod
