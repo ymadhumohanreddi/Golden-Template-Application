@@ -185,8 +185,3 @@ userVariables:
   mandatory: true
   name: wfvar
   value: wf-var-value
-- type: TEXT
-  fixed: false
-  mandatory: false
-  name: dash-dash
-  value: dash-value
