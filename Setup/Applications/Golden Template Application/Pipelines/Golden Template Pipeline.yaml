@@ -60,15 +60,24 @@ pipelineStages:
   workflowVariables:
   - name: wfvar
     value: wf-var-value
+  - entityType: APPDYNAMICS_CONFIGID
+    name: AppDynamics_Server
+    value: ${template.appDserver}
+  - entityType: APPDYNAMICS_TIERID
+    name: AppDynamics_Tier
+    value: ${template.appDtier}
   - entityType: ENVIRONMENT
     name: Environment
-    value: prod
+    value: ${template.env}
   - entityType: SERVICE
     name: Service
-    value: SampleK8s
+    value: ${template.service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: Prod
+    value: ${template.infrastructure}
+  - entityType: APPDYNAMICS_APPID
+    name: AppDynamics_Application
+    value: ${template.appDapp}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
