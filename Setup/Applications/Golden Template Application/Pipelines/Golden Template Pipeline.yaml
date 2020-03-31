@@ -56,3 +56,5 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: Prod
+tags:
+  ${app.defaults.RUNTIME_PATH}: ''
