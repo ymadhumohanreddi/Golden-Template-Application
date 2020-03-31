@@ -58,3 +58,4 @@ pipelineStages:
     value: Prod
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
+  ${workflow.variables.wfvar}: ''
