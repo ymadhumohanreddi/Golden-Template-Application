@@ -11,7 +11,7 @@ pipelineStages:
   workflowName: Silver Rolling Deployment
   workflowVariables:
   - name: wfvar
-    value: wf-var-value
+    value: ${blah}
   - entityType: APPDYNAMICS_CONFIGID
     name: AppDynamics_Server
     value: ${template.appDserver}
