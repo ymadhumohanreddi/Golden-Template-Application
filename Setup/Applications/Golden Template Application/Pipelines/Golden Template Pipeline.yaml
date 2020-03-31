@@ -10,15 +10,19 @@ pipelineStages:
   stageName: Dev Rolling Deployment
   workflowName: Golden Rolling Deployment
   workflowVariables:
+  - name: wfvar
+    value: wf-var-value
+  - name: dash-dash
+    value: ${template.dash-value}
   - entityType: ENVIRONMENT
     name: Environment
-    value: dev
+    value: ${template.environment}
   - entityType: SERVICE
     name: Service
-    value: SampleK8s
+    value: ${template.service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: Dev
+    value: ${template.infra}
 - type: APPROVAL
   name: Approval 1
   parallel: false
