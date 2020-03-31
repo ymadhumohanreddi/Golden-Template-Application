@@ -13,7 +13,7 @@ pipelineStages:
   - name: wfvar
     value: wf-var-value
   - name: dash-dash
-    value: ${template.dash-value}
+    value: dash
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template.environment}
