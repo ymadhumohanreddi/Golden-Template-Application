@@ -74,7 +74,7 @@ pipelineStages:
     value: ${template.service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template.infrastructure}
+    value: ${template.infraProd}
   - entityType: APPDYNAMICS_APPID
     name: AppDynamics_Application
     value: ${template.appDapp}
