@@ -31,33 +31,6 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
-    steps:
-    - type: APP_DYNAMICS
-      name: AppDynamics
-      properties:
-        analysisTolerance: LOW
-        comparisonStrategy: COMPARE_WITH_PREVIOUS
-        executeWithPreviousSteps: false
-        templateExpressions:
-        - expression: ${AppDynamics_Server}
-          fieldName: analysisServerConfigId
-          metadata:
-            entityType: APPDYNAMICS_CONFIGID
-            relatedField: ${AppDynamics_Application}
-        - expression: ${AppDynamics_Application}
-          fieldName: applicationId
-          metadata:
-            entityType: APPDYNAMICS_APPID
-            relatedField: ${AppDynamics_Tier}
-        - expression: ${AppDynamics_Tier}
-          fieldName: tierId
-          metadata:
-            entityType: APPDYNAMICS_TIERID
-            relatedField: ''
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        timeDuration: 15
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
@@ -165,21 +138,6 @@ userVariables:
   fixed: false
   mandatory: true
   name: InfraDefinition_KUBERNETES
-- type: ENTITY
-  description: Variable for AppDynamics Server entity in AppDynamics
-  fixed: false
-  mandatory: true
-  name: AppDynamics_Server
-- type: ENTITY
-  description: Variable for AppDynamics Application entity in AppDynamics
-  fixed: false
-  mandatory: true
-  name: AppDynamics_Application
-- type: ENTITY
-  description: Variable for AppDynamics Tier entity in AppDynamics
-  fixed: false
-  mandatory: true
-  name: AppDynamics_Tier
 - type: TEXT
   fixed: false
   mandatory: true
