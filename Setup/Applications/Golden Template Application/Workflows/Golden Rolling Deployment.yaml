@@ -35,12 +35,28 @@ phases:
     - type: APP_DYNAMICS
       name: AppDynamics
       properties:
-        analysisServerConfigId: MbjQ0gX0QbaNTmV4HinmnA
         analysisTolerance: LOW
-        applicationId: '15588'
         comparisonStrategy: COMPARE_WITH_PREVIOUS
         executeWithPreviousSteps: false
-        tierId: '212813'
+        templateExpressions:
+        - expression: ${AppDynamics_Server}
+          fieldName: analysisServerConfigId
+          metadata:
+            entityType: APPDYNAMICS_CONFIGID
+            relatedField: ${AppDynamics_Application}
+        - expression: ${AppDynamics_Application}
+          fieldName: applicationId
+          metadata:
+            entityType: APPDYNAMICS_APPID
+            relatedField: ${AppDynamics_Tier}
+        - expression: ${AppDynamics_Tier}
+          fieldName: tierId
+          metadata:
+            entityType: APPDYNAMICS_TIERID
+            relatedField: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeDuration: 15
     stepsInParallel: false
   - type: K8S_PHASE_STEP
@@ -149,6 +165,21 @@ userVariables:
   fixed: false
   mandatory: true
   name: InfraDefinition_KUBERNETES
+- type: ENTITY
+  description: Variable for AppDynamics Server entity in AppDynamics
+  fixed: false
+  mandatory: true
+  name: AppDynamics_Server
+- type: ENTITY
+  description: Variable for AppDynamics Application entity in AppDynamics
+  fixed: false
+  mandatory: true
+  name: AppDynamics_Application
+- type: ENTITY
+  description: Variable for AppDynamics Tier entity in AppDynamics
+  fixed: false
+  mandatory: true
+  name: AppDynamics_Tier
 - type: TEXT
   fixed: false
   mandatory: true
