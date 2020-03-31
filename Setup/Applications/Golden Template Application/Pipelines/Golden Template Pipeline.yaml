@@ -59,7 +59,7 @@ pipelineStages:
   workflowName: Golden Rolling Deployment
   workflowVariables:
   - name: wfvar
-    value: wf-var-value
+    value: ${foo}
   - entityType: APPDYNAMICS_CONFIGID
     name: AppDynamics_Server
     value: ${template.appDserver}
