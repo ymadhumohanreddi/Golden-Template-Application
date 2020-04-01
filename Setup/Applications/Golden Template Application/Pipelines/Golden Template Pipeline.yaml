@@ -14,13 +14,13 @@ pipelineStages:
     value: ${foo}
   - entityType: ENVIRONMENT
     name: Environment
-    value: dev
+    value: ${template_env}
   - entityType: SERVICE
     name: Service
     value: SampleK8s
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: Dev
+    value: ${template_infra}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
