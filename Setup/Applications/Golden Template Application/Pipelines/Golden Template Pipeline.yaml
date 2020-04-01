@@ -28,7 +28,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: MtEQIkXxStKEo-Z2WNcexQ
+    pipelineStageElementId: Z7pZjn20QeGR9HccO1--ow
     stageName: STAGE 2
     disable: false
     timeoutMillis: 86400000
@@ -58,7 +58,7 @@ pipelineStages:
     value: ${template_service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infraProd}
+    value: ${template_infra}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
