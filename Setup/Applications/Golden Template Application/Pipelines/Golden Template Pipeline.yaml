@@ -28,7 +28,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: -5ILEgcpRtK-J_OkuQ_0bg
+    pipelineStageElementId: ubtjnr2FRmagJkcEFQVm3g
     stageName: STAGE 2
     disable: false
     timeoutMillis: 86400000
@@ -40,6 +40,25 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
+- type: ENV_STATE
+  name: Prod Deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: Prod Deployment Stage
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - name: wfvar
+    value: wf-var-value
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: ${template_env}
+  - entityType: SERVICE
+    name: Service
+    value: ${template_service}
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: ${template_infraProd}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
