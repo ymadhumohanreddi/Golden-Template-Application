@@ -21,6 +21,25 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${template_infra}
+- type: APPROVAL
+  name: Approval 1
+  parallel: false
+  properties:
+    userGroups:
+    - yQo3j5AvTwWgA4zmojRntg
+    variables: null
+    pipelineStageElementId: XDpEi9LtTBC4rD6PBzYQtQ
+    stageName: STAGE 2
+    disable: false
+    timeoutMillis: 86400000
+    disableAssertion: null
+    pipelineStageParallelIndex: 2
+    approvalStateType: USER_GROUP
+    sweepingOutputName: ''
+    pipelineId: Zhbd6PbaQ1-9tNkT-Sm0tg
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
