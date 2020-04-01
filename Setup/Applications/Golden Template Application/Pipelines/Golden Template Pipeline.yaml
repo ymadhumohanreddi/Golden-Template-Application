@@ -55,7 +55,7 @@ pipelineStages:
     value: ${template_service1}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infra}
+    value: ${template_infra1}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
