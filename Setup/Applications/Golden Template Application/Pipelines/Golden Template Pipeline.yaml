@@ -10,8 +10,6 @@ pipelineStages:
   stageName: Dev Rolling Deployment
   workflowName: Silver Rolling Deployment
   workflowVariables:
-  - name: wfvar
-    value: wf-var-value
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template_env}
@@ -25,6 +23,7 @@ pipelineStages:
   name: Approval 1
   parallel: false
   properties:
+    workflowVariables: null
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
@@ -48,8 +47,6 @@ pipelineStages:
   stageName: Prod Deployment Stage
   workflowName: Golden Rolling Deployment
   workflowVariables:
-  - name: wfvar
-    value: wf-var-value
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template_env}
