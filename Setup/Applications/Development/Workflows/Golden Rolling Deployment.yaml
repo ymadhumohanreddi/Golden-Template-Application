@@ -36,7 +36,6 @@ phases:
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: SampleK8s
   statefulSet: false
   templateExpressions:
   - expression: ${Service}
@@ -75,7 +74,6 @@ rollbackPhases:
     phaseStepNameForRollback: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: SampleK8s
   statefulSet: false
   templateExpressions:
   - expression: ${Service}
