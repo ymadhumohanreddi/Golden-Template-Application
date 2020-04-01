@@ -20,7 +20,7 @@ pipelineStages:
     value: ${template_service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infraDev}
+    value: ${template_infra}
 - type: APPROVAL
   name: Approval 1
   parallel: false
@@ -28,7 +28,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: ubtjnr2FRmagJkcEFQVm3g
+    pipelineStageElementId: MtEQIkXxStKEo-Z2WNcexQ
     stageName: STAGE 2
     disable: false
     timeoutMillis: 86400000
