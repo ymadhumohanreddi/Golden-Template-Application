@@ -138,8 +138,3 @@ userVariables:
   fixed: false
   mandatory: true
   name: InfraDefinition_KUBERNETES
-- type: TEXT
-  fixed: false
-  mandatory: true
-  name: wfvar
-  value: wf-var-value
