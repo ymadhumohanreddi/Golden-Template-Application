@@ -1,0 +1,33 @@
+harnessApiVersion: '1.0'
+type: TRIGGER
+artifactSelections:
+- artifactStreamName: library_nginx
+  regex: false
+  serviceName: SampleK8s
+  type: LAST_COLLECTED
+executionName: Silver Rolling Deployment
+executionType: Workflow
+triggerCondition:
+- type: SCHEDULED
+  cronDescription: every hour at minute 3 UTC
+  cronExpression: 3 * * * ?
+  onNewArtifact: false
+workflowVariables:
+- entityType: APPDYNAMICS_CONFIGID
+  name: AppDynamics_Server
+  value: MbjQ0gX0QbaNTmV4HinmnA
+- entityType: APPDYNAMICS_TIERID
+  name: AppDynamics_Tier
+  value: '212813'
+- entityType: ENVIRONMENT
+  name: Environment
+  value: dev
+- entityType: SERVICE
+  name: Service
+  value: SampleK8s
+- entityType: INFRASTRUCTURE_DEFINITION
+  name: InfraDefinition_KUBERNETES
+  value: Dev
+- entityType: APPDYNAMICS_APPID
+  name: AppDynamics_Application
+  value: '15588'
