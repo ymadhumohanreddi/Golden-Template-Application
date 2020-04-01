@@ -12,12 +12,6 @@ pipelineStages:
   workflowVariables:
   - name: wfvar
     value: ${blah}
-  - entityType: APPDYNAMICS_CONFIGID
-    name: AppDynamics_Server
-    value: ${template.appDserver}
-  - entityType: APPDYNAMICS_TIERID
-    name: AppDynamics_Tier
-    value: ${template.appDtier}
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template.env}
@@ -27,9 +21,6 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${template.infraDev}
-  - entityType: APPDYNAMICS_APPID
-    name: AppDynamics_Application
-    value: ${template.appDapp}
 - type: APPROVAL
   name: Approval 1
   parallel: false
@@ -60,12 +51,6 @@ pipelineStages:
   workflowVariables:
   - name: wfvar
     value: ${foo}
-  - entityType: APPDYNAMICS_CONFIGID
-    name: AppDynamics_Server
-    value: ${template.appDserver}
-  - entityType: APPDYNAMICS_TIERID
-    name: AppDynamics_Tier
-    value: ${template.appDtier}
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template.env}
@@ -75,9 +60,6 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${template.infraProd}
-  - entityType: APPDYNAMICS_APPID
-    name: AppDynamics_Application
-    value: ${template.appDapp}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
