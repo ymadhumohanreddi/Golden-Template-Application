@@ -3,15 +3,15 @@ type: PIPELINE
 description: Pipeline template for Dev teams.
 pipelineStages:
 - type: ENV_STATE
-  name: Prod Deployment
+  name: Dev Deployment
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: Prod Rolling Deployment
-  workflowName: Golden Rolling Deployment
+  stageName: Dev Rolling Deployment
+  workflowName: Silver Rolling Deployment
   workflowVariables:
   - name: wfvar
-    value: ${foo}
+    value: wf-var-value
   - entityType: ENVIRONMENT
     name: Environment
     value: ${template_env}
@@ -20,7 +20,7 @@ pipelineStages:
     value: ${template_service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infra}
+    value: ${template_infraDev}
 - type: APPROVAL
   name: Approval 1
   parallel: false
@@ -28,7 +28,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: XDpEi9LtTBC4rD6PBzYQtQ
+    pipelineStageElementId: -5ILEgcpRtK-J_OkuQ_0bg
     stageName: STAGE 2
     disable: false
     timeoutMillis: 86400000
