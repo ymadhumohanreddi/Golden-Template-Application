@@ -3,45 +3,6 @@ type: PIPELINE
 description: Pipeline template for Dev teams.
 pipelineStages:
 - type: ENV_STATE
-  name: Dev Deployment
-  parallel: false
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: Dev Rolling Deployment
-  workflowName: Silver Rolling Deployment
-  workflowVariables:
-  - name: wfvar
-    value: ${blah}
-  - entityType: ENVIRONMENT
-    name: Environment
-    value: ${template.env}
-  - entityType: SERVICE
-    name: Service
-    value: ${template.service}
-  - entityType: INFRASTRUCTURE_DEFINITION
-    name: InfraDefinition_KUBERNETES
-    value: ${template.infraDev}
-- type: APPROVAL
-  name: Approval 1
-  parallel: false
-  properties:
-    workflowVariables: null
-    userGroups:
-    - yQo3j5AvTwWgA4zmojRntg
-    variables: null
-    pipelineStageElementId: ON4mdsA8QVWbdl9GyfUUGw
-    stageName: Approval to Prod
-    disable: false
-    timeoutMillis: 86400000
-    disableAssertion: null
-    pipelineStageParallelIndex: 2
-    approvalStateType: USER_GROUP
-    sweepingOutputName: ''
-    pipelineId: Zhbd6PbaQ1-9tNkT-Sm0tg
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: Approval to Prod
-- type: ENV_STATE
   name: Prod Deployment
   parallel: false
   skipCondition:
@@ -53,13 +14,13 @@ pipelineStages:
     value: ${foo}
   - entityType: ENVIRONMENT
     name: Environment
-    value: ${template.env}
+    value: dev
   - entityType: SERVICE
     name: Service
-    value: ${template.service}
+    value: SampleK8s
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template.infraProd}
+    value: Dev
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
