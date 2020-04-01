@@ -7,3 +7,6 @@ configVariables:
   valueType: TEXT
 deploymentType: KUBERNETES
 helmVersion: V2
+tags:
+  artifactType: DOCKER
+  deploymentType: KUBERNETES
