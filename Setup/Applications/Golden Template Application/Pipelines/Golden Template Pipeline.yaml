@@ -18,7 +18,7 @@ pipelineStages:
     value: ${service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${infra}
+    value: ${infraDev}
 - type: APPROVAL
   name: Approval 1
   parallel: false
