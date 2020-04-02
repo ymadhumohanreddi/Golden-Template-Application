@@ -49,13 +49,13 @@ pipelineStages:
   workflowVariables:
   - entityType: ENVIRONMENT
     name: Environment
-    value: ${template_env}
+    value: ${env}
   - entityType: SERVICE
     name: Service
-    value: ${template_service}
+    value: ${service}
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infra}
+    value: ${infra}
 tags:
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
