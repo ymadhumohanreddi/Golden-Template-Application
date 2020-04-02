@@ -18,3 +18,20 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: Dev
+- type: ENV_STATE
+  name: Golden Rolling Deployment (Workflow Template)
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
+  workflowName: Golden Rolling Deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: prod
+  - entityType: SERVICE
+    name: Service
+    value: SampleK8s
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: Prod
