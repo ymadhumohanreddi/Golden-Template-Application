@@ -12,13 +12,13 @@ pipelineStages:
   workflowVariables:
   - entityType: ENVIRONMENT
     name: Environment
-    value: ${template_env}
+    value: dev
   - entityType: SERVICE
     name: Service
-    value: ${template_service}
+    value: SampleK8s
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
-    value: ${template_infra}
+    value: Dev
 - type: APPROVAL
   name: Approval 1
   parallel: false
