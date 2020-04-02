@@ -10,12 +10,6 @@ pipelineStages:
   stageName: Dev Rolling Deployment
   workflowName: Silver Rolling Deployment
   workflowVariables:
-  - entityType: APPDYNAMICS_CONFIGID
-    name: AppDynamics_Server
-    value: ${appDserver}
-  - entityType: APPDYNAMICS_TIERID
-    name: AppDynamics_Tier
-    value: ${appDtier}
   - entityType: ENVIRONMENT
     name: Environment
     value: ${env}
@@ -25,9 +19,6 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${infra}
-  - entityType: APPDYNAMICS_APPID
-    name: AppDynamics_Application
-    value: ${appDapp}
 - type: APPROVAL
   name: Approval 1
   parallel: false
