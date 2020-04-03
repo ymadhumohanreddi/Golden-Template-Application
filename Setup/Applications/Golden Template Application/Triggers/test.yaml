@@ -13,12 +13,6 @@ triggerCondition:
   cronExpression: 3 * * * ?
   onNewArtifact: false
 workflowVariables:
-- entityType: APPDYNAMICS_CONFIGID
-  name: AppDynamics_Server
-  value: MbjQ0gX0QbaNTmV4HinmnA
-- entityType: APPDYNAMICS_TIERID
-  name: AppDynamics_Tier
-  value: '212813'
 - entityType: ENVIRONMENT
   name: Environment
   value: dev
@@ -28,6 +22,3 @@ workflowVariables:
 - entityType: INFRASTRUCTURE_DEFINITION
   name: InfraDefinition_KUBERNETES
   value: Dev
-- entityType: APPDYNAMICS_APPID
-  name: AppDynamics_Application
-  value: '15588'
