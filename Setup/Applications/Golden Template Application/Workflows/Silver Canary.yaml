@@ -63,6 +63,14 @@ phases:
     - name: relatedField
     - name: entityType
       value: INFRASTRUCTURE_DEFINITION
+postDeploymentSteps:
+- type: TERRAFORM_DESTROY
+  name: Terraform Destroy
+  properties:
+    delegateTag: ''
+    provisionerName: Terraform Example
+    timeoutMillis: 300000
+    workspace: ''
 preDeploymentSteps:
 - type: TERRAFORM_PROVISION
   name: TF Example
