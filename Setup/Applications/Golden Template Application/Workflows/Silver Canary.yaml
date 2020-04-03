@@ -63,6 +63,20 @@ phases:
     - name: relatedField
     - name: entityType
       value: INFRASTRUCTURE_DEFINITION
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: TF Example
+  properties:
+    backendConfigs: null
+    delegateTag: ''
+    inheritApprovedPlan: false
+    provisionerName: Terraform Example
+    runPlanOnly: false
+    targets: null
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: qa-kubernetes_cluster
