@@ -27,7 +27,7 @@ pipelineStages:
     userGroups:
     - yQo3j5AvTwWgA4zmojRntg
     variables: null
-    pipelineStageElementId: Z7pZjn20QeGR9HccO1--ow
+    pipelineStageElementId: CTl3SPG1Rw-QiKpPJkU4DQ
     stageName: STAGE 2
     disable: false
     timeoutMillis: 86400000
@@ -35,7 +35,7 @@ pipelineStages:
     pipelineStageParallelIndex: 2
     approvalStateType: USER_GROUP
     sweepingOutputName: ''
-    pipelineId: Zhbd6PbaQ1-9tNkT-Sm0tg
+    pipelineId: c80URdlFRsObw6NxjoFy9g
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
@@ -56,6 +56,3 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: ${infraProd}
-tags:
-  ${app.defaults.RUNTIME_PATH}: ''
-  ${workflow.variables.wfvar}: ''
