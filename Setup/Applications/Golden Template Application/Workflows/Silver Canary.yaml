@@ -63,6 +63,41 @@ phases:
     - name: relatedField
     - name: entityType
       value: INFRASTRUCTURE_DEFINITION
+postDeploymentSteps:
+- type: TERRAFORM_DESTROY
+  name: Terraform Destroy
+  properties:
+    delegateTag: ''
+    provisionerName: Terraform Example
+    timeoutMillis: 300000
+    workspace: ''
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: TF Example
+  properties:
+    backendConfigs: null
+    delegateTag: ''
+    inheritApprovedPlan: false
+    provisionerName: Terraform Example
+    runPlanOnly: false
+    targets: null
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: ''
+- type: TERRAFORM_APPLY
+  name: TF Apply
+  properties:
+    backendConfigs: null
+    delegateTag: ''
+    inheritApprovedPlan: false
+    provisionerName: Terraform Example
+    runPlanOnly: false
+    targets: null
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: qa-kubernetes_cluster
