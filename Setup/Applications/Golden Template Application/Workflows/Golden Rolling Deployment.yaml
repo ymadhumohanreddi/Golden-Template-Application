@@ -97,7 +97,6 @@ tags:
   ${account.defaults.example}: ''
   ${app.defaults.RUNTIME_PATH}: ''
   ${workflow.variables.wfvar}: ''
-  WorkflowVar: ${workflow.variables.wfvar}
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
