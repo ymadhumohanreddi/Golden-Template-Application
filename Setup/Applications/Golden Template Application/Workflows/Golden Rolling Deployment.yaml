@@ -93,6 +93,8 @@ rollbackPhases:
     - name: relatedField
     - name: entityType
       value: INFRASTRUCTURE_DEFINITION
+tags:
+  ${workflow.variables.commitID}: ''
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
