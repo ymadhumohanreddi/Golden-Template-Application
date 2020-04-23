@@ -136,5 +136,4 @@ userVariables:
 - type: TEXT
   fixed: false
   mandatory: false
-  name: compute
-  value: ${6 * 12 + 5 / 2.6}
+  name: commitID
