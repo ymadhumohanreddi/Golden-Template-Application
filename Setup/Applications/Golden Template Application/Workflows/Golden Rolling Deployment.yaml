@@ -96,7 +96,6 @@ rollbackPhases:
 tags:
   ${account.defaults.example}: ''
   ${app.defaults.RUNTIME_PATH}: ''
-  ${workflow.variables.compute}: ''
   ${workflow.variables.wfvar}: ''
   WorkflowVar: ${workflow.variables.wfvar}
 templateExpressions:
