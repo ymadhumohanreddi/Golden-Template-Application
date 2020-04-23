@@ -96,7 +96,6 @@ rollbackPhases:
 tags:
   ${account.defaults.example}: ''
   ${app.defaults.RUNTIME_PATH}: ''
-  ${workflow.variables.wfvar}: ''
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
