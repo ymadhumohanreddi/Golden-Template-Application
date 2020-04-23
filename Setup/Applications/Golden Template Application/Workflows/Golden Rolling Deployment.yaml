@@ -93,8 +93,6 @@ rollbackPhases:
     - name: relatedField
     - name: entityType
       value: INFRASTRUCTURE_DEFINITION
-tags:
-  ${account.defaults.example}: ''
 templateExpressions:
 - expression: ${Environment}
   fieldName: envId
