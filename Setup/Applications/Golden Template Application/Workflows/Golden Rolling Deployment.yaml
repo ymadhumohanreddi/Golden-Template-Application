@@ -28,6 +28,29 @@ phases:
     steps:
     - type: K8S_DEPLOYMENT_ROLLING
       name: Rollout Deployment
+    - type: SHELL_SCRIPT
+      name: Slack
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: "url=https://hooks.slack.com/services/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\n\
+          \  \npayload='\n{\n  \"text\": \"Deployed to *${infra.kubernetes.namespace}*\"\
+          ,\n  \"attachments\": [\n    {\n      \"author_name\": \"${deploymentTriggeredBy}\"\
+          ,\n      \"text\": \"Deployment text\",\n      \"color\": \"#00a3e0\"\n\
+          \    }\n  ]\n}'\n  \ncurl -s -X POST -H \"Content-type: application/json\"\
+          \ -d \"$payload\" $url"
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
