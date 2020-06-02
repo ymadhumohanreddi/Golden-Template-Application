@@ -1,5 +1,0 @@
-harnessApiVersion: '1.0'
-type: TERRAFORM
-path: .
-sourceRepoBranch: master
-sourceRepoSettingName: K8s TF
